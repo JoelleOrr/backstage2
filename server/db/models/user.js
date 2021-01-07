@@ -40,9 +40,11 @@ const userSchema = new mongoose.Schema(
       required: true,
       default: false,
     },
+
     equipment: {
       type: Array,
     },
+    
     tokens: [
       {
         token: {
