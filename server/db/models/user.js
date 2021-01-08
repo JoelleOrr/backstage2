@@ -3,7 +3,8 @@ const mongoose = require('mongoose'),
   bcrypt = require('bcryptjs'),
   jwt = require('jsonwebtoken'),
   Equipment = require('./equipment'),
-  Events = require('./events');
+  Events = require('./events'),
+  Stage = require('./stage');
 
 const userSchema = new mongoose.Schema(
   {
@@ -73,6 +74,12 @@ userSchema.virtual('event', {
   ref: 'Equipment',
   localField: '_id',
   foreignField: 'userS',
+});
+
+userSchema.virtual('stage', {
+  ref: 'Stage',
+  localField: '_id',
+  foreignField: 'user',
 });
 
 userSchema.methods.toJSON = function () {
