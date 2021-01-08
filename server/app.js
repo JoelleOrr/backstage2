@@ -3,6 +3,7 @@ const express = require('express'),
   morgan = require('morgan'),
   app = express(),
   cookieParser = require('cookie-parser'),
+  userRouter = require('./routes/secure/users'),
   openRoutes = require('./routes/open'),
   path = require('path');
 
@@ -22,7 +23,11 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, '..', 'client', 'build')));
 }
 
-// We'll add more stuff in between in a little bit.
+//  Authentication Middleware
+app.use('/api/*', passport.authenticate('jwt', { session: false }));
+
+// Authenticated Routes
+app.use('/api/users', userRouter);
 
 if (process.env.NODE_ENV === 'production') {
   // Handle React routing, return all requests to React app

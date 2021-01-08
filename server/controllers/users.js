@@ -34,3 +34,13 @@ exports.loginUser = async (req, res) => {
     res.status(400).json({ error: e.toString() });
   }
 };
+
+//Authenticated Routes Below
+
+// /**
+//  * @param {req.user}
+//  * Get current user
+//  * @return {user}
+//  */
+
+exports.getCurrentUser = async (req, res) => res.json(req.user);
