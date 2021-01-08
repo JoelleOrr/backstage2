@@ -4,6 +4,7 @@ const router = require('express').Router(),
     updateCurrentUser,
     logoutUser,
     logoutAllDevices,
+    uploadAvatar,
     deleteUser,
   } = require('../../controllers/users');
 
