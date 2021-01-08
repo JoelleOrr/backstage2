@@ -122,3 +122,22 @@ exports.deleteUser = async (req, res) => {
     res.status(500).json({ error: e.toString() });
   }
 };
+
+// /**
+//  * @param {image}
+//  * Upload avatar
+//  * @return {}
+//  */
+
+exports.uploadAvatar = async (req, res) => {
+  try {
+    const response = await cloudinary.uploader.upload(
+      req.files.avatar.tempFilePath
+    );
+    req.user.avatar = response.secure_url;
+    await req.user.save();
+    res.json(response);
+  } catch (e) {
+    res.json({ error: e.toString() });
+  }
+};
