@@ -192,3 +192,19 @@ exports.uploadAvatar = async (req, res) => {
     res.json({ error: e.toString() });
   }
 };
+
+// /**
+//  * @param {password}
+//  * Update password
+//  * @return {}
+//  */
+exports.updatePassword = async (req, res) => {
+  try {
+    req.user.password = req.body.password;
+    await req.user.save();
+    res.clearCookie('jwt');
+    res.json({ message: 'password updated successfully' });
+  } catch (e) {
+    res.json({ error: e.toString() });
+  }
+};

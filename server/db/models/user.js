@@ -1,7 +1,8 @@
 const mongoose = require('mongoose'),
   validator = require('validator'),
   bcrypt = require('bcryptjs'),
-  jwt = require('jsonwebtoken');
+  jwt = require('jsonwebtoken'),
+  Equipment = require('../db/models/equipment');
 
 const userSchema = new mongoose.Schema(
   {
@@ -44,7 +45,7 @@ const userSchema = new mongoose.Schema(
     equipment: {
       type: Array,
     },
-    
+
     tokens: [
       {
         token: {
@@ -61,6 +62,12 @@ const userSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
+userSchema.virtual('items', {
+  ref: 'Equipment',
+  localField: '_id',
+  foreignField: 'user',
+});
 
 userSchema.methods.toJSON = function () {
   const user = this;
