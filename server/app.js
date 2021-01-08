@@ -1,12 +1,13 @@
 require('./db/config');
 const express = require('express'),
-  morgan = require('morgan'),
   app = express(),
+  morgan = require('morgan'),
   cookieParser = require('cookie-parser'),
   userRouter = require('./routes/secure/users'),
   openRoutes = require('./routes/open'),
   path = require('path'),
   fileUpload = require('express-fileupload'),
+  equipmentRouter = require('./routes/secure/equipment'),
   passport = require('./middleware/authentication');
 
 // Parse incoming JSON into objects
@@ -37,6 +38,7 @@ app.use('/api/*', passport.authenticate('jwt', { session: false }));
 
 // Authenticated Routes
 app.use('/api/users', userRouter);
+app.use('/api/equipment', equipmentRouter);
 
 if (process.env.NODE_ENV === 'production') {
   // Handle React routing, return all requests to React app
