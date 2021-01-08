@@ -67,3 +67,39 @@ exports.updateCurrentUser = async (req, res) => {
     res.status(400).json({ error: e.toString() });
   }
 };
+
+// /**
+//  * @param {}
+//  * Logout a user
+//  * @return {}
+//  */
+
+exports.logoutUser = async (req, res) => {
+  try {
+    req.user.tokens = req.user.tokens.filter(token => {
+      return token.token !== req.cookies.jwt;
+    });
+    await req.user.save();
+    res.clearCookie('jwt');
+    res.json({ message: 'Logged out' });
+  } catch (e) {
+    res.status(500).json({ error: e.toString() });
+  }
+};
+
+// /**
+//  * @param {}
+//  * Logout all devices
+//  * @return {}
+//  */
+
+exports.logoutAllDevices = async (req, res) => {
+  try {
+    req.user.tokens = [];
+    await req.user.save();
+    res.clearCookie('jwt');
+    res.json({ message: 'all devices logged out' });
+  } catch (e) {
+    res.status(500).send();
+  }
+};
