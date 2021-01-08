@@ -17,4 +17,6 @@ router.post('/logoutall', logoutAllDevices);
 
 router.delete('/', deleteUser);
 
+router.post('/avatar', uploadAvatar);
+
 module.exports = router;
