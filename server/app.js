@@ -5,7 +5,8 @@ const express = require('express'),
   cookieParser = require('cookie-parser'),
   userRouter = require('./routes/secure/users'),
   openRoutes = require('./routes/open'),
-  path = require('path');
+  path = require('path'),
+  passport = require('./middleware/authentication');
 
 // Parse incoming JSON into objects
 app.use(express.json());
