@@ -1,4 +1,7 @@
-const User = require('../db/models/user');
+const User = require('../db/models/user'),
+  cloudinary = require('cloudinary').v2,
+  // { sendWelcomeEmail, sendCancellationEmail } = require('../emails/'),
+  jwt = require('jsonwebtoken');
 
 exports.createUser = async (req, res) => {
   const { name, email, password } = req.body;
@@ -65,5 +68,57 @@ exports.updateCurrentUser = async (req, res) => {
     res.json(req.user);
   } catch (e) {
     res.status(400).json({ error: e.toString() });
+  }
+};
+
+// /**
+//  * @param {}
+//  * Logout a user
+//  * @return {}
+//  */
+
+exports.logoutUser = async (req, res) => {
+  try {
+    req.user.tokens = req.user.tokens.filter(token => {
+      return token.token !== req.cookies.jwt;
+    });
+    await req.user.save();
+    res.clearCookie('jwt');
+    res.json({ message: 'Logged out' });
+  } catch (e) {
+    res.status(500).json({ error: e.toString() });
+  }
+};
+
+// /**
+//  * @param {}
+//  * Logout all devices
+//  * @return {}
+//  */
+
+exports.logoutAllDevices = async (req, res) => {
+  try {
+    req.user.tokens = [];
+    await req.user.save();
+    res.clearCookie('jwt');
+    res.json({ message: 'all devices logged out' });
+  } catch (e) {
+    res.status(500).send();
+  }
+};
+
+/**
+ * @param {}
+ * Delete a user
+ * @return {}
+ */
+exports.deleteUser = async (req, res) => {
+  try {
+    await req.user.remove();
+    sendCancellationEmail(req.user.email, req.user.name);
+    res.clearCookie('jwt');
+    res.json({ message: 'user deleted' });
+  } catch (e) {
+    res.status(500).json({ error: e.toString() });
   }
 };
