@@ -8,7 +8,8 @@ const express = require('express'),
   path = require('path'),
   fileUpload = require('express-fileupload'),
   equipmentRouter = require('./routes/secure/equipment'),
-  passport = require('./middleware/authentication');
+  eventsRouter = require('./routes/secure/events');
+passport = require('./middleware/authentication');
 
 // Parse incoming JSON into objects
 app.use(express.json());
@@ -39,6 +40,7 @@ app.use('/api/*', passport.authenticate('jwt', { session: false }));
 // Authenticated Routes
 app.use('/api/users', userRouter);
 app.use('/api/equipment', equipmentRouter);
+app.use('api/events', eventsRouter);
 
 if (process.env.NODE_ENV === 'production') {
   // Handle React routing, return all requests to React app
