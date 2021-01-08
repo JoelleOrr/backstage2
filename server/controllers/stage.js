@@ -1,6 +1,10 @@
 const Stage = require('../db/models/stage'),
   mongoose = require('mongoose');
 
+// ***********************************************//
+// Get All Stages
+// ***********************************************//
+
 exports.getAllStages = async (req, res) => {
   try {
     const Stages = await Stage.find({ user: req.user._id });
@@ -9,6 +13,10 @@ exports.getAllStages = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
+
+// ***********************************************//
+// Create Stage
+// ***********************************************//
 
 exports.createStage = async (req, res) => {
   try {
@@ -23,14 +31,11 @@ exports.createStage = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
-exports.getAllStages = async (req, res) => {
-  try {
-    const Stages = await Stage.find({ user: req.user._id });
-    res.status(200).json(Stages);
-  } catch (error) {
-    res.status(400).json(error);
-  }
-};
+
+// ***********************************************//
+// Get One Stage
+// ***********************************************//
+
 exports.getOneStage = async (req, res) => {
   try {
     const Stage = await Stage.findOne({ _id: req.params.id });
@@ -39,6 +44,10 @@ exports.getOneStage = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
+
+// ***********************************************//
+// Update Stage
+// ***********************************************//
 
 exports.updateStage = async (req, res) => {
   const updates = Object.keys(req.body);
@@ -54,6 +63,11 @@ exports.updateStage = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
+
+// ***********************************************//
+// Delete Stage
+// ***********************************************//
+
 exports.deleteStage = async (req, res) => {
   try {
     const stageToDelete = await Stage.findOneAndDelete({
