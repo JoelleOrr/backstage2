@@ -34,3 +34,36 @@ exports.loginUser = async (req, res) => {
     res.status(400).json({ error: e.toString() });
   }
 };
+
+//Authenticated Routes Below
+
+// /**
+//  * @param {req.user}
+//  * Get current user
+//  * @return {user}
+//  */
+
+exports.getCurrentUser = async (req, res) => res.json(req.user);
+
+// /**
+//  * @param {{updates}}
+//  * Update a user
+//  * @return {user}
+//  */
+
+exports.updateCurrentUser = async (req, res) => {
+  const updates = Object.keys(req.body);
+  const allowedUpdates = ['name', 'email', 'password', 'avatar'];
+  const isValidOperation = updates.every(update =>
+    allowedUpdates.includes(update)
+  );
+  if (!isValidOperation)
+    return res.status(400).send({ error: 'invalid updates!' });
+  try {
+    updates.forEach(update => (req.user[update] = req.body[update]));
+    await req.user.save();
+    res.json(req.user);
+  } catch (e) {
+    res.status(400).json({ error: e.toString() });
+  }
+};
