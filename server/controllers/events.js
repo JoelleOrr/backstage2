@@ -1,5 +1,9 @@
 const Event = require('../db/models/events');
 
+// ***********************************************//
+// Create Event
+// ***********************************************//
+
 exports.createEvent = async (req, res) => {
   try {
     const { eventTitle, eventDate, selectedPackage } = req.body.data;
@@ -16,6 +20,10 @@ exports.createEvent = async (req, res) => {
   }
 };
 
+// ***********************************************//
+// Get All Events
+// ***********************************************//
+
 exports.getAllEvents = async (req, res) => {
   try {
     const theEvents = await Event.find({ user: req.user._id });
@@ -24,6 +32,10 @@ exports.getAllEvents = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
+
+// ***********************************************//
+// Get Event
+// ***********************************************//
 
 exports.getEvent = async (req, res) => {
   try {
@@ -34,6 +46,11 @@ exports.getEvent = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+// ***********************************************//
+// Update Event
+// ***********************************************//
+
 exports.updateEvent = async (req, res) => {
   const updates = Object.keys(req.body);
   const allowedUpdates = ['eventTitle', 'eventDate', 'selectedPackage'];
@@ -54,6 +71,11 @@ exports.updateEvent = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
+
+// ***********************************************//
+// Delete Event
+// ***********************************************//
+
 exports.deleteEvent = async (req, res) => {
   try {
     const event = await Event.findOneAndDelete({
