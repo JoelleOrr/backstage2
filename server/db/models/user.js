@@ -2,7 +2,8 @@ const mongoose = require('mongoose'),
   validator = require('validator'),
   bcrypt = require('bcryptjs'),
   jwt = require('jsonwebtoken'),
-  Equipment = require('../db/models/equipment');
+  Equipment = require('./equipment'),
+  Stage = require('./stage');
 
 const userSchema = new mongoose.Schema(
   {
@@ -65,6 +66,12 @@ const userSchema = new mongoose.Schema(
 
 userSchema.virtual('items', {
   ref: 'Equipment',
+  localField: '_id',
+  foreignField: 'user',
+});
+
+userSchema.virtual('stage', {
+  ref: 'Stage',
   localField: '_id',
   foreignField: 'user',
 });
