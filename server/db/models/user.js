@@ -6,6 +6,7 @@ const mongoose = require('mongoose'),
   Events = require('./events'),
   Stage = require('./stage');
 
+
 const userSchema = new mongoose.Schema(
   {
     name: {
