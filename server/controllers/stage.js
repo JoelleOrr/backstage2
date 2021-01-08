@@ -2,23 +2,10 @@ const Stage = require('../db/models/stage'),
   mongoose = require('mongoose');
 
 // ***********************************************//
-// Get All Stages
+// Add Stage
 // ***********************************************//
 
-exports.getAllStages = async (req, res) => {
-  try {
-    const Stages = await Stage.find({ user: req.user._id });
-    res.status(200).json(Stages);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-};
-
-// ***********************************************//
-// Create Stage
-// ***********************************************//
-
-exports.createStage = async (req, res) => {
+exports.addStage = async (req, res) => {
   try {
     const stage = new Stage({
       ...req.body,
@@ -27,6 +14,19 @@ exports.createStage = async (req, res) => {
 
     await stage.save();
     res.status(201).json(stage);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+// ***********************************************//
+// Get All Stages
+// ***********************************************//
+
+exports.getAllStages = async (req, res) => {
+  try {
+    const Stages = await Stage.find({ user: req.user._id });
+    res.status(200).json(Stages);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
