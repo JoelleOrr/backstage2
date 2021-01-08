@@ -198,6 +198,7 @@ exports.uploadAvatar = async (req, res) => {
 //  * Update password
 //  * @return {}
 //  */
+
 exports.updatePassword = async (req, res) => {
   try {
     req.user.password = req.body.password;
