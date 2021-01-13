@@ -6,7 +6,6 @@ const mongoose = require('mongoose'),
   Events = require('./events'),
   Stage = require('./stage');
 
-
 const userSchema = new mongoose.Schema(
   {
     name: {
@@ -71,6 +70,7 @@ userSchema.virtual('items', {
   localField: '_id',
   foreignField: 'user',
 });
+
 userSchema.virtual('event', {
   ref: 'Equipment',
   localField: '_id',
