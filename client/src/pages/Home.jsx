@@ -1,13 +1,13 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import './index.css';
+import '../styles/index.css';
 
 const Home = () => {
   const history = useHistory();
   return (
     <div className='landing-page'>
       <div
-        className='landing-container-1 bg-no-repeat bg-center'
+        className='landing-container-1'
         style={{ backgroundImage: "url('landing-page-images/backstage1.png')" }}
       >
         <form
@@ -62,7 +62,7 @@ const Home = () => {
       </div>
 
       <div
-        className='landing-container-3 bg-no-repeat bg-center bg-cover'
+        className='landing-container-3'
         style={{
           backgroundImage: "url('landing-page-images/green-background.png')",
         }}
@@ -95,13 +95,13 @@ const Home = () => {
           <img
             className='landing-pic-back'
             src='../landing-page-images/land-pic-4.png'
-            alt='artis mirror with lightbulbs'
+            alt='dj icon'
           />
         </div>
       </div>
 
       <div
-        className='landing-container-5 bg-no-repeat bg-center'
+        className='landing-container-5'
         style={{
           backgroundImage: "url('landing-page-images/white-background.png')",
         }}
