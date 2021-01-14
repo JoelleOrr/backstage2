@@ -5,6 +5,7 @@
   justify-content: center;
   height: 100%;
   width: 100%;
+  background-color: #222222;
 }
 
 .landing-container-1 {
@@ -22,11 +23,11 @@
 }
 
 .join-button {
-  background-color: red;
+  background-color: #a6271f;
 }
 
 .join-button:hover {
-  background-color: red;
+  background-color: #a6271f;
 }
 
 .join-button {
@@ -35,7 +36,7 @@
   line-height: 2rem;
   padding-top: 4rem;
   padding-left: 4rem;
-  color: red;
+  color: #a6271f;
   width: 12rem;
 }
 
@@ -61,7 +62,7 @@
 }
 
 .landing-container-3 {
-  background-color: gray;
+  background-color: #222222;
   display: flex;
   flex-direction: row-reverse;
   height: 70vh;
@@ -84,7 +85,7 @@
 }
 
 .landing-container-5 {
-  background-color: slategrey;
+  background-color: #222222;
   display: flex;
   flex-direction: row-reverse;
   height: 70vh;
@@ -108,7 +109,7 @@
 }
 
 .landing-footer {
-  background-color: gray;
+  background-color: #222222;
   display: flex;
   flex-direction: column;
   height: 20vh;
