@@ -17,29 +17,20 @@ const Home = () => {
           action='/api/users/login'
         >
           <div className='welcome'>
-            <h1 className='title-1 pt-20'>WELCOME TO BACKSTAGE.</h1>
+            <h1 className='title-1'>WELCOME TO BACKSTAGE.</h1>
             <p className='title-paragraph-1'>
               We're here to make connecting venues and artists easier.
             </p>
+          </div>
+          <div>
             <button
+              className='join-button'
               type='button'
               onClick={() => {
                 history.push('/signup');
               }}
-              style={{
-                height: '4rem',
-                width: '14rem',
-                backgroundColor: '#a6271f',
-                borderRadius: '10px',
-                color: '#fff7f1',
-                fontSize: '1.5rem',
-                position: 'relative',
-                top: '6rem',
-                left: '4rem',
-                border: '1px solid white',
-              }}
             >
-              Join Backstage
+              Join Backstage.
             </button>
           </div>
         </form>
