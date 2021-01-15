@@ -4,8 +4,8 @@ import Home from './pages/Home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // import MainNav from './components/mainNav/MainNav';
 // import Dashboard from './pages/Dashboard';
-// import Login from './components/Login';
-// import SignUp from './components/SignUp';
+import Login from './components/Login';
+import SignUp from './components/SignUp';
 // import ArtistCollab from './pages/collaboration/ArtistCollab';
 import './styles/index.css';
 
@@ -16,10 +16,11 @@ function App() {
       {/* <MainNav /> */}
       <Switch>
         <Route exact path='/' component={Home} />
-        {/* <Route exact path="/login" component={Login} />
-          <Route exact path="/signup" component={SignUp} />
-          <Route path="/dashboard" component={Dashboard} />
-          <Route path="/artist" component={ArtistCollab} /> */}
+        <Route exact path='/signup' component={SignUp} />
+
+        <Route exact path='/login' component={Login} />
+        {/* <Route path="/dashboard" component={Dashboard} />
+        <Route path="/artist" component={ArtistCollab} /> */}
       </Switch>
     </BrowserRouter>
     // {/* </AppContextProvider> */}

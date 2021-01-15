@@ -1,0 +1,146 @@
+/*** Home Page ***/
+
+body {
+  background-color: #222222;
+}
+
+.landing-page {
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #222222;
+}
+
+.landing-container-1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 80vh;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7rem;
+  margin-left: 10rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.5rem;
+}
+
+.join-button {
+  height: 2.75rem;
+  width: 15.875rem;
+  margin-top: 10rem;
+  margin-left: 10rem;
+  align-content: center;
+  font-size: 1.5rem;
+  background-color: #a6271f;
+  position: relative;
+  color: #fff7f1;
+  cursor: pointer;
+}
+
+.join-button:hover {
+  background-color: black;
+}
+
+.landing-container-back {
+  display: flex;
+  height: 70vh;
+}
+
+.landing-container-info-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5rem;
+  padding: 0.5rem;
+  width: 40vw;
+  color: #fff7f1;
+}
+
+.title {
+  margin-left: 5rem;
+  font-size: 47px;
+  font-weight: 700;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.title-paragraph {
+  margin-left: 5rem;
+  font-size: 1.6875rem;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.landing-pic-back {
+  height: 33.75rem;
+  width: 25.625rem;
+  margin-left: 15rem;
+  padding: 1rem;
+}
+
+.landing-container-3 {
+  background-color: #222222;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 70vh;
+  width: 100%;
+  color: #fff7f1;
+}
+
+.landing-pic-3 {
+  display: flex;
+  width: 25.0625rem;
+  height: 33.9375rem;
+  width: 100%;
+  padding: 1rem;
+  margin-left: 4rem;
+}
+
+.landing-container-3-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 4rem;
+  padding: 0.5rem;
+}
+
+.landing-container-5 {
+  background-color: #222222;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 70vh;
+  width: 100%;
+}
+
+.landing-pic-5 {
+  display: flex;
+  height: 70vh;
+  margin-left: 3.5rem;
+  padding: 0.5rem;
+  width: 30vw;
+}
+
+.landing-container-5-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 7rem;
+  padding: 0.5rem;
+}
+
+.landing-footer {
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  margin: 1rem;
+}
+
+.landing-footer-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-left: 3rem;
+}
