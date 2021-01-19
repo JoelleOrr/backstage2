@@ -1,0 +1,64 @@
+.mainNav-items {
+  display: flex;
+  justify-content: space-between;
+  height: 5.75rem;
+  width: 100%;
+  background-color: #222223;
+  font-family: audiowide;
+  font-size: 3rem;
+  color: #fff7f1;
+  position: sticky;
+}
+
+.main-nav-2 {
+  background-color: purple;
+  margin-top: 3rem;
+}
+
+.main-nav-ul {
+  background-color: yellow;
+}
+
+.main-nav-pro {
+  height: 3.8125rem;
+  color: #fff7f1;
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-left: 3.125rem;
+  background-color: yellowgreen;
+}
+
+/* .menu-icon {
+    
+} */
+
+.profile-icon {
+  margin-top: 1rem;
+  margin-right: 6rem;
+  height: 4rem;
+  width: 4rem;
+}
+
+/* .profile-icon {
+    display: flex;
+    justify-content: end;
+    margin-left: 10rem;
+    height: 3rem;
+    width: 3rem;
+    background-color: red;
+} */
+
+/* .dropdown:hover .dropdown-menu {
+    display: block;
+    
+  } */
+
+.mainNav-logo {
+  display: flex;
+  height: 3.8125rem;
+  width: rem;
+  color: #fff7f1;
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-left: 3.125rem;
+}
