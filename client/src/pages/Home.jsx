@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import '../pages/Home.css';
+import '../components/mainNav.css';
 
 const Home = () => {
   const history = useHistory();
@@ -61,7 +62,7 @@ const Home = () => {
         <div className='landing-container-3-info'>
           <h1 className='title'>Easily share critical info with your artist</h1>
           <p className='title-paragraph'>
-            Stage dimenstions? Rain plans? Tell your artist know everything they
+            Stage dimentions? Rain plans? Tell your artist know everything they
             need to know before show time.
           </p>
         </div>

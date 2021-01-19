@@ -2,18 +2,18 @@ import React from 'react';
 // import { AppContextProvider } from './context/AppContext';
 import Home from './pages/Home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-// import MainNav from './components/mainNav/MainNav';
+import MainNav from './components/mainNav';
 // import Dashboard from './pages/Dashboard';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 // import ArtistCollab from './pages/collaboration/ArtistCollab';
-import './styles/index.css';
+import './pages/Home.css';
 
 function App() {
   return (
     // <AppContextProvider>
     <BrowserRouter>
-      {/* <MainNav /> */}
+      <MainNav />
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/signup' component={SignUp} />
