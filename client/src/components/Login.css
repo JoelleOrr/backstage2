@@ -1,0 +1,74 @@
+body {
+  background-color: #222222;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.login-container {
+  background-color: #222222;
+}
+
+.main-area {
+  justify-content: center;
+  text-align: center;
+  background-color: #222222;
+}
+
+.form {
+  border-radius: 0.25rem;
+  align-content: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.inner-form {
+  font-weight: 700;
+  padding: 0.5rem;
+}
+
+.text-ob {
+  align-content: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin: 0.75rem;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #fff7f1;
+}
+
+.text-input {
+  border-radius: 0.25rem;
+  align-content: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: #fff7f1;
+}
+
+.btn-area {
+  text-align: center;
+  padding: 10px;
+}
+
+.btn-1 {
+  /* position: absolute; */
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  height: 44px;
+  width: 130px;
+  border-radius: 0px;
+  background-color: #a6271f;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 27px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff7f1;
+}
