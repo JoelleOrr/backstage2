@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import equipLists, { sort } from '../../venueEquip';
 import swal from 'sweetalert';
-import '../../styles/index.css';
+import '../equipment/myEquipment.css';
 
 const categoryList = [
   'Audio Cables',
@@ -218,11 +218,6 @@ class MyEquipment extends React.Component {
                           onBlur={event =>
                             this.handleQuantityChange(event, index)
                           }
-                          style={{
-                            height: '3rem',
-                            width: '5rem',
-                            color: 'black',
-                          }}
                         />
                         <svg
                           // className="delete-button"

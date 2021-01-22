@@ -68,17 +68,17 @@ class Dashboard extends React.Component {
             </Link>
           </div>
 
-          {/* <Switch>
-            <Route exact path="/dashboard/events" component={MyEvents} />
+          <Switch>
+            {/* <Route exact path="/dashboard/events" component={MyEvents} />
             <Route exact path="/dashboard/new-stage" component={NewStage} />
             <Route
               exact
               path="/dashboard/stages/:id"
               component={StageDetails}
             />
-            <Route exact path="/dashboard/stages" component={MyStages} />
-            <Route exact path="/dashboard/equipment" component={MyEquipment} />
-          </Switch> */}
+            <Route exact path="/dashboard/stages" component={MyStages} /> */}
+            <Route exact path='/dashboard/equipment' component={MyEquipment} />
+          </Switch>
         </BrowserRouter>
       </div>
     );

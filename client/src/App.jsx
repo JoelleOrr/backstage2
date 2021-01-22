@@ -23,7 +23,7 @@ function App() {
         {/* <Route path="/artist" component={ArtistCollab} /> */}
       </Switch>
     </BrowserRouter>
-    // {/* </AppContextProvider> */}
+    // </AppContextProvider>
   );
 }
 export default App;

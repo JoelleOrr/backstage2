@@ -1,0 +1,124 @@
+.equipment-align-items {
+  display: flex;
+  align-items: flex-start;
+}
+
+.equipment-text-special {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: black;
+  width: 10rem;
+}
+
+.equipment-description-box {
+  border-radius: 0.375rem;
+  height: 3rem;
+  color: black;
+  width: 20vw;
+}
+
+.equipment-quantity-box {
+  border-radius: 0.375rem;
+  height: 3rem;
+  color: black;
+  width: 5rem;
+}
+
+.my-equipment-con {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.my-equipment-component {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  width: 83.333333%;
+}
+
+.existing-equip-list {
+  border-right: '5px solid #FFF7F1';
+  margin-top: '2.5rem';
+  border-radius: '10px';
+  font-weight: 600;
+  padding: '1rem';
+  color: 'white';
+}
+
+.your-equipment-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  color: red;
+}
+
+.equipp-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.equipp-2 {
+  width: 75vw;
+  display: flex;
+  border: white;
+  color: black;
+  align-items: center;
+  text-align: left;
+  height: 3rem;
+}
+
+.equipp-3 {
+  width: 25vw;
+  display: flex;
+  background-color: white;
+  color: black;
+  font-weight: 400;
+  align-items: center;
+  justify-content: center;
+}
+
+.equipment-form-container {
+}
+
+.equipp-4 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  border-radius: '10px';
+  padding: '1rem';
+  min-width: '38rem';
+  max-width: '38rem';
+}
+
+.add-equipment-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+  color: red;
+}
+
+.equipment-category-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.category-drop-menu {
+  color: black;
+}
+
+.equipment-category-btn-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  width: 100%;
+}
