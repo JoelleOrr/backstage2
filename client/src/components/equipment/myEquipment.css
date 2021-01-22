@@ -25,6 +25,7 @@
 }
 
 .my-equipment-con {
+  width: 100vw;
   display: flex;
   justify-content: center;
   margin: 0.5rem;
@@ -52,7 +53,7 @@
   line-height: 2rem;
   padding-bottom: 1.5rem;
   text-align: center;
-  color: red;
+  color: #fff7f1;
 }
 
 .equipp-1 {
@@ -61,7 +62,7 @@
 }
 
 .equipp-2 {
-  width: 75vw;
+  width: 50vw;
   display: flex;
   border: white;
   color: black;
@@ -81,6 +82,7 @@
 }
 
 .equipment-form-container {
+  width: 50vw;
 }
 
 .equipp-4 {
@@ -99,7 +101,7 @@
   font-size: 1.5rem;
   line-height: 2rem;
   margin-bottom: 1.5rem;
-  color: red;
+  color: #fff7f1;
 }
 
 .equipment-category-dropdown {
