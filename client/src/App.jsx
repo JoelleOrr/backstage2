@@ -3,7 +3,7 @@ import React from 'react';
 import Home from './pages/Home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MainNav from './components/mainNav';
-// import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 // import ArtistCollab from './pages/collaboration/ArtistCollab';
@@ -19,11 +19,11 @@ function App() {
         <Route exact path='/signup' component={SignUp} />
 
         <Route exact path='/login' component={Login} />
-        {/* <Route path="/dashboard" component={Dashboard} />
-        <Route path="/artist" component={ArtistCollab} /> */}
+        <Route path='/dashboard' component={Dashboard} />
+        {/* <Route path="/artist" component={ArtistCollab} /> */}
       </Switch>
     </BrowserRouter>
-    // {/* </AppContextProvider> */}
+    // </AppContextProvider>
   );
 }
 export default App;

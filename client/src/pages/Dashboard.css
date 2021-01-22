@@ -1,0 +1,44 @@
+.profile-container {
+  width: 100vw;
+}
+
+.header-container {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.profile-picture {
+  width: 72px;
+  height: 96px;
+  position: absolute;
+  width: 453px;
+  height: 317px;
+  left: 5px;
+  top: 44px;
+}
+
+.nav-div {
+  background-color: #222222;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  color: #fff7f1;
+  bottom: 4vh;
+  font-size: 2rem;
+}
+
+.dash-tab {
+  font-weight: 600;
+  text-align: center;
+  margin: 0px;
+  color: #fff7f1;
+}
+
+.stage-tab {
+  font-weight: 600;
+  text-align: center;
+  margin: 0px;
+  color: #fff7f1;
+}
