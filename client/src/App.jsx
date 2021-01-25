@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 // import MainNav from './components/Navbar';
-// import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 // import ArtistCollab from './pages/collaboration/ArtistCollab';
