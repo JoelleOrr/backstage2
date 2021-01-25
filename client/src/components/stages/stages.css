@@ -1,0 +1,249 @@
+.my-stages-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dash-title-bar {
+  display: flex;
+  padding: 0.5rem;
+  width: 50%;
+  justify-content: center;
+  background-color: #222222;
+}
+
+.saved-stage-out {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 58.333333%;
+}
+
+.saved-stage-event-card {
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem;
+  margin-bottom: 0.25rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  min-width: 700px;
+  width: 100%;
+  background-color: #fff7f1;
+}
+
+.saved-stage-inside-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.saved-stage-inside-card-real {
+  background-color: #222222;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  height: 14rem;
+  margin: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  width: 66.666667%;
+}
+
+.saved-stage-inside-card-text-info {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  color: #000000;
+}
+
+.saved-stage-card-text-outdoor {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.saved-stage-card-dimensions {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.saved-stage-card-text-comments {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+/* *********************NEW STAGE******************** */
+
+.new-stage-full {
+  display: flex;
+  justify-content: center;
+}
+
+.new-stage-container {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.stage-name-input {
+  min-width: 700px;
+  min-height: 50px;
+  text-align: center;
+}
+
+.new-stage-dimensions-box {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.new-stage-dimensions {
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.dash-h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: red;
+}
+
+.new-stage-area {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.stage-depth {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.stage-width {
+  margin-left: 20px;
+}
+
+.stage-height {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.new-stage-place {
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  margin: 2px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.outdoor-checkbox-label {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.outdoor-checkbox-input {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.comment-box {
+  border-radius: 5px;
+}
+
+.new-stage-comments-title {
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+}
+
+.dash-h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: red;
+}
+
+.new-stage-comments {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.new-stage-button-box {
+  display: flex;
+  justify-content: center;
+}
+
+.new-stage-button {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: #a6271f;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* *********************STAGE DETAILS******************** */
+
+/* 
+.drop-stage {
+
+} */
+
+/* *********************BUTTONS******************** */
+
+.saved-stage-btn-area {
+  margin: 0.75rem;
+  padding: 0.5rem;
+  text-align: center;
+  width: 33.333333%;
+}
+
+.btn-2 {
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  height: 44px;
+  width: 130px;
+  border-radius: 0px;
+  background: #494a14;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 27px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff7f1;
+}
+
+.btn-4 {
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  height: 44px;
+  width: 130px;
+  border-radius: 0px;
+  border-color: #fff7f1;
+  background: #616161;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 27px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff7f1;
+}
