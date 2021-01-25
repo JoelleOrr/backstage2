@@ -283,6 +283,39 @@
   padding-left: 3rem;
 }
 
+:root {
+  --bg: #222222;
+  --bg-accent: #484a4d;
+  --text-color: #fff7f1;
+  --nav-size: 5.75rem;
+  --border: 1px solid #474a4d;
+  --border-radius: 8px;
+  --speed: 500ms;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.mainNav-logo {
+  display: flex;
+  justify-content: space-between;
+  height: 4.75rem;
+  width: 100%;
+  background-color: #222223;
+  font-family: audiowide;
+  font-size: 3rem;
+  color: #fff7f1;
+  position: sticky;
+}
+
 .my-equipment-con {
   display: flex;
   justify-content: center;
@@ -299,8 +332,8 @@
 
 .existing-equip-list {
   border-right: '5px solid #FFF7F1';
-  margintop: '2.5rem';
-  borderradius: '10px';
+  margin-top: '2.5rem';
+  border-radius: '10px';
   font-weight: 600;
   padding: '1rem';
   color: 'white';
@@ -339,8 +372,8 @@
   justify-content: center;
 }
 
-.equipment-form-container {
-}
+/* .equipment-form-container {
+} */
 
 .equipp-4 {
   color: white;
