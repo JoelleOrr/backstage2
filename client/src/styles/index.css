@@ -314,6 +314,7 @@ a {
   font-size: 3rem;
   color: #fff7f1;
   position: sticky;
+}
 
 .my-equipment-con {
   display: flex;
@@ -331,8 +332,8 @@ a {
 
 .existing-equip-list {
   border-right: '5px solid #FFF7F1';
-  margintop: '2.5rem';
-  borderradius: '10px';
+  margin-top: '2.5rem';
+  border-radius: '10px';
   font-weight: 600;
   padding: '1rem';
   color: 'white';
@@ -371,8 +372,8 @@ a {
   justify-content: center;
 }
 
-.equipment-form-container {
-}
+/* .equipment-form-container {
+} */
 
 .equipp-4 {
   color: white;
@@ -412,5 +413,4 @@ a {
   font-size: 1.25rem;
   line-height: 1.75rem;
   width: 100%;
-
 }
