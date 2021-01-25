@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import MyStages from '../components/stages/MyStages';
-// import NewStage from '../components/stages/NewStage';
+import NewStage from '../components/stages/NewStage';
 import MyEvents from '../components/events/MyEvents';
 // import CreateEvent from '../components/events/createEvent/CreateEvent';
 import MyEquipment from '../components/equipment/MyEquipment';
@@ -47,11 +47,6 @@ class Dashboard extends React.Component {
                   ? 'selected-tab'
                   : 'unselected-tab'
               }`}
-              style={{
-                margin: '0px',
-                color: '#fff7f1',
-                fontWeight: '600',
-              }}
             >
               My Stages
             </Link>
@@ -69,14 +64,14 @@ class Dashboard extends React.Component {
           </div>
 
           <Switch>
-            {/* <Route exact path="/dashboard/events" component={MyEvents} />
-            <Route exact path="/dashboard/new-stage" component={NewStage} />
-            <Route
+            <Route exact path='/dashboard/events' component={MyEvents} />
+            <Route exact path='/dashboard/new-stage' component={NewStage} />
+            {/* <Route
               exact
               path="/dashboard/stages/:id"
               component={StageDetails}
-            />
-            <Route exact path="/dashboard/stages" component={MyStages} /> */}
+            /> */}
+            <Route exact path='/dashboard/stages' component={MyStages} />
             <Route exact path='/dashboard/equipment' component={MyEquipment} />
           </Switch>
         </BrowserRouter>
