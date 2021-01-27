@@ -12,7 +12,7 @@ const StageDetails = () => {
   const getStageDetails = () => {
     const stageId = history.location.pathname.slice(18);
     axios
-      .get(`/api/packages/${stageId}`)
+      .get(`/api/stages/${stageId}`)
       .then(results => setCurrentStage(results.data))
       .catch(error => swal('Operation failed', { icon: 'error' }));
   };
@@ -25,7 +25,7 @@ const StageDetails = () => {
   const handleUpdateStage = async () => {
     const stageId = history.location.pathname.slice(18);
     await axios
-      .patch(`/api/packages/${stageId}`, stageData)
+      .patch(`/api/stages/${stageId}`, stageData)
       .then(results => console.log(results));
     swal('Stage Updated!', { icon: 'success' });
     history.push('/dashboard/stages');
@@ -113,7 +113,7 @@ const StageDetails = () => {
           </div>
           <br />
         </div>
-        <div className='new-stage-button-box '>
+        <div className='new-stage-button-box'>
           <button className='new-stage-button' onClick={handleUpdateStage}>
             Save
           </button>

@@ -28,6 +28,7 @@
     "passport-jwt": "^4.0.0",
     "react-bootstrap": "^1.4.3",
     "sweetalert": "^2.1.2",
+    "use-clipboard-hook": "^1.1.1",
     "validator": "^13.5.2"
   },
   "scripts": {

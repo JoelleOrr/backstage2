@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import MyStages from '../components/stages/MyStages';
 import NewStage from '../components/stages/NewStage';
 import MyEvents from '../components/events/MyEvents';
-// import CreateEvent from '../components/events/createEvent/CreateEvent';
+import CreateEvent from '../components/events/CreateEvent';
 import MyEquipment from '../components/equipment/MyEquipment';
-// import StageDetails from '../components/stages/StageDetails';
+import StageDetails from '../components/stages/StageDetails';
 // import AddImage from '../components/AddImage';
 import '../pages/Dashboard.css';
 
@@ -23,9 +23,9 @@ class Dashboard extends React.Component {
           }}
         >
           <div className='profile-picture'>{/* <AddImage /> */}</div>
-
-          {/* <CreateEvent show={this.state.show} /> */}
+          <CreateEvent show={this.state.show} />
         </div>
+
         <BrowserRouter>
           <div className='nav-div'>
             <Link
@@ -66,11 +66,11 @@ class Dashboard extends React.Component {
           <Switch>
             <Route exact path='/dashboard/events' component={MyEvents} />
             <Route exact path='/dashboard/new-stage' component={NewStage} />
-            {/* <Route
+            <Route
               exact
-              path="/dashboard/stages/:id"
+              path='/dashboard/stages/:id'
               component={StageDetails}
-            /> */}
+            />
             <Route exact path='/dashboard/stages' component={MyStages} />
             <Route exact path='/dashboard/equipment' component={MyEquipment} />
           </Switch>
