@@ -5,39 +5,39 @@ import swal from 'sweetalert';
 import '../stages/stages.css';
 
 const MyStages = () => {
-  const [packages, setPackages] = useState([]);
+  const [stages, setStages] = useState([]);
   const [isUpdated, setIsUpdated] = useState(false);
 
   const history = useHistory();
 
-  const getPackages = async () => {
+  const getStages = async () => {
     try {
       let res = await axios({
         method: 'GET',
-        url: `/api/packages`,
+        url: `/api/stages`,
         withCredentials: true,
       });
-      setPackages(res.data);
+      setStages(res.data);
     } catch (error) {
       console.log(error);
     }
   };
   useEffect(() => {
-    getPackages();
+    getStages();
   }, [isUpdated]);
 
-  const handlePackageDelete = async packageId => {
+  const handleStageDelete = async stageId => {
     try {
       setIsUpdated(!isUpdated);
-      await axios.delete(`/api/packages/${packageId}`);
+      await axios.delete(`/api/stages/${stageId}`);
       swal('Stage deleted.', { icon: 'success' });
     } catch (error) {
       alert(error);
     }
   };
 
-  const handleEditClick = packageId => {
-    history.push(`/dashboard/stages/${packageId}`);
+  const handleEditClick = stageId => {
+    history.push(`/dashboard/stages/${stageId}`);
   };
 
   return (
@@ -52,38 +52,38 @@ const MyStages = () => {
       </div>
 
       <div className='saved-stage-out'>
-        {packages.map(package1 => {
+        {stages.map(stage1 => {
           return (
             <div className='saved-stage-event-card'>
               <br />
               <div className='saved-stage-inside-card'>
                 <div className='saved-stage-inside-card-real'>
                   <h2 className='saved-stage-inside-card-text-info'>
-                    {package1?.name}
+                    {stage1?.name}
                   </h2>
                   <br />
                   <span className='saved-stage-card-text-outdoor'>
-                    {package1?.isOutdoor ? 'Outdoor' : 'Indoor'}
+                    {stage1?.isOutdoor ? 'Outdoor' : 'Indoor'}
                   </span>
                   <span className='saved-stage-card-dimensions'>
-                    {`Dimensions: ${package1?.width} x ${package1?.depth} ft.`}
+                    {`Dimensions: ${stage1?.width} x ${stage1?.depth} ft.`}
                   </span>
                   <p className='saved-stage-card-text-comments'>
-                    <em>{package1?.comments}</em>
+                    <em>{stage1?.comments}</em>
                   </p>
                 </div>
 
                 <div className='saved-stage-btn-area'>
                   <button
                     className='btn-2'
-                    onClick={() => handleEditClick(package1?._id)}
+                    onClick={() => handleEditClick(stage1?._id)}
                   >
                     Edit
                   </button>
 
                   <button
                     className='btn-4'
-                    onClick={() => handlePackageDelete(package1?._id)}
+                    onClick={() => handleStageDelete(stage1?._id)}
                   >
                     Delete
                   </button>

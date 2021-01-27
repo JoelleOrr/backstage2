@@ -10,7 +10,7 @@ const NewStage = () => {
 
   const handleFormSubmit = async event => {
     event.preventDefault();
-    await axios.post('/api/packages', stageData);
+    await axios.post('/api/stages', stageData);
     swal('Stage saved!', { icon: 'success' });
     history.push('/dashboard/stages');
   };
@@ -20,7 +20,7 @@ const NewStage = () => {
   return (
     <div className='new-stage-full'>
       <div>
-        <form name='new-package' onSubmit={handleFormSubmit}>
+        <form name='new-stage' onSubmit={handleFormSubmit}>
           <div className='new-stage-container'>
             <input
               className='stage-name'
