@@ -29,6 +29,7 @@
     "react-bootstrap": "^1.4.3",
     "react-transition-group": "^4.4.1",
     "sweetalert": "^2.1.2",
+    "use-clipboard-hook": "^1.1.1",
     "validator": "^13.5.2"
   },
   "scripts": {
