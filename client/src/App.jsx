@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Home from './pages/Home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-// import MainNav from './components/Navbar';
+// import MainNav from './components/mainNav.css';
 import Dashboard from './pages/Dashboard';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
@@ -15,6 +15,8 @@ import { ReactComponent as SettingsIcon } from './icons/settings.svg';
 import { ReactComponent as LogoutIcon } from './icons/logout.svg';
 import { ReactComponent as MyProfileIcon } from './icons/profile-icon.svg';
 import { Link } from 'react-router-dom';
+
+import { CSSTransition } from 'react-transition-group';
 
 function App() {
   return (
@@ -43,9 +45,15 @@ function App() {
 }
 
 function DropdownMenu() {
+  const [activeMenu, setActiveMenu] = useState('main');
+
   function DropdownItem(props) {
     return (
-      <a href='#' className='menu-item'>
+      <a
+        href='#'
+        className='menu-item'
+        onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}
+      >
         <span className='icon-button'>{props.leftIcon}</span>
         {props.children}
 
@@ -55,9 +63,34 @@ function DropdownMenu() {
   }
   return (
     <div className='dropdown'>
-      <DropdownItem leftIcon={<MyProfileIcon />}>Loggin</DropdownItem>
-      <DropdownItem leftIcon={<LogoutIcon />}>Logout</DropdownItem>
-      <DropdownItem leftIcon={<SettingsIcon />}>Settings</DropdownItem>
+      <CSSTransition
+        in={activeMenu === 'main'}
+        unmountOnExit
+        timeout={500}
+        classNames='menu-primary'
+      >
+        <div className='menu'>
+          <DropdownItem leftIcon={<MyProfileIcon />} goToMenu='main'>
+            <Link to='/login'>Login</Link>
+          </DropdownItem>
+          <DropdownItem leftIcon={<LogoutIcon />}>Logout</DropdownItem>
+          <DropdownItem leftIcon={<SettingsIcon />} goToMenu='settings'>
+            Settings
+          </DropdownItem>
+        </div>
+      </CSSTransition>
+
+      <CSSTransition
+        in={activeMenu === 'settings'}
+        unmountOnExit
+        timeout={500}
+        classNames='menu-secondary'
+      >
+        <div className='menu'>
+          <DropdownItem leftIcon={<SettingsIcon />} goToMenu='main' />
+          <DropdownItem leftIcon={<SettingsIcon />}>Settings</DropdownItem>
+        </div>
+      </CSSTransition>
     </div>
   );
 }
