@@ -6,8 +6,10 @@ function Ready() {
     <div>
       <div className='readyPage'>
         <div className='readyTitle'>Ready to experience a new way to book?</div>
-        <div className='doItButton'>lets do it</div>
-        <div className='notYetButton'>not yet</div>
+        <div className='readyOptions'>
+          <div className='doItButton'>lets do it</div>
+          <div className='notYetButton'>not yet</div>
+        </div>
       </div>
     </div>
   );
