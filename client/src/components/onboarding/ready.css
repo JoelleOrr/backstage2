@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.readyPage {
+  background-color: #222222;
+  object-fit: cover;
+  height: 60rem;
+  /* height: 56.25rem; */
+  font-family: Roboto;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.625rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  color: #fff7f1;
+  display: flex;
+  flex-direction: column;
+}
+.readyTitle {
+  margin-top: 33.777vh;
+  font-family: Roboto;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.625rem;
+  letter-spacing: 0rem;
+  text-align: center;
+}
+.readyOptions {
+  margin-top: 7.333vh;
+  display: flex;
+  flex-direction: row;
+
+  align-self: center;
+  justify-content: space-between;
+}
+.doItButton {
+  background-color: #6e7351;
+  border: 0.4375rem solid #6e7351;
+  border-radius: 0.9375rem;
+  color: #fff7f1;
+  font-size: 2.25rem;
+  text-align: center;
+  height: 2.61rem;
+  width: 19.174375rem;
+  text-align: center;
+  padding-top: 2.1125rem;
+  padding-bottom: 2.5175rem;
+  margin-right: 4.0625rem;
+}
+.notYetButton {
+  border: 0.375rem solid #6e7351;
+  border-radius: 0.9375rem;
+  color: #fff7f1;
+  font-size: 2.25rem;
+  text-align: center;
+  height: 2.61rem;
+  width: 19.174375rem;
+  text-align: center;
+  padding-top: 2.1125rem;
+  padding-bottom: 2.5175rem;
+  margin-left: 4.0625rem;
+}
